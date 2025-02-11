@@ -28,3 +28,8 @@ jobs:
         cache: 'yarn'
     - run: yarn install
 
+    - name: Deploy to Render Server (Master)
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      run: |
+        curl -X GET https://api.render.com/deploy/srv-culd3rdsvqrc73cbsudg?key=Tx4EBcTtHUg
+
