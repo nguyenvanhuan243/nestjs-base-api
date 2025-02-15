@@ -7,6 +7,7 @@ export function setupSwagger(app: INestApplication): void {
     .setTitle('NESTJS API APPLICATION')
     .setDescription('This is nestjs api')
     .setVersion('1.0')
+    .addBearerAuth() // Add this line for Bearer token authentication
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
