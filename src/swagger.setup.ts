@@ -4,8 +4,8 @@ import { INestApplication } from '@nestjs/common';
 
 export function setupSwagger(app: INestApplication): void {
   const config = new DocumentBuilder()
-    .setTitle('Your API Title')
-    .setDescription('Your API Description')
+    .setTitle('NESTJS API APPLICATION')
+    .setDescription('This is nestjs api')
     .setVersion('1.0')
     .build();
 
